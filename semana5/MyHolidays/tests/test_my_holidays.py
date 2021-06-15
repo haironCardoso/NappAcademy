@@ -155,6 +155,7 @@ class TestMyCalendar:
         dt4 = date(2021, 4, 15)
         dt5 = '15/05/2021'
         objeto = MyCalendar(dt1, dt2, dt3)
+        objeto.add_holiday(dt1,dt2)
         assert objeto.check_holiday(dt1) is True
         assert objeto.check_holiday(dt2) is True
         assert objeto.check_holiday(dt1) is True
@@ -173,6 +174,7 @@ class TestMyCalendar:
         dt4 = '15/05'
         dt5 = '24/24/2021'
         objeto = MyCalendar(dt1, dt2)
+        objeto.add_holiday(dt1,dt2)
         assert objeto.check_holiday(dt1) is True
         assert objeto.check_holiday(dt2) is True
         assert objeto.check_holiday(dt3) is False
